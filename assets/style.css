@@ -164,21 +164,3 @@
     background-color: var(--tertiary-color);
     cursor: pointer;
 }
-
-/* media query */
-@media screen and (max-width: 768px) {
-    #rules {
-        margin-left: 20%;
-        margin-right: 20%;
-        font-size: 12pt;
-        text-align:justify;
-    }
-
-    .btnStart {
-        margin-left: 40%;
-    }
-
-    #clear {
-        margin-left: 45%;
-    }
-}
