@@ -1,11 +1,22 @@
-// local storage
-var initial = document.querySelector("contactInfo");
+var clearBtn = document.getElementById("clear");
 
-userInfo.addEventListener("click", function(event) {
-    var user = {
-        userName: initial.ariaValueMax.trim()
-    };
-
-    localStorage.setItem("user", JSON.stringify(user));
-    localStorage.getItem("user", JSON.stringify(user));
+// clear high scores
+clearBtn.addEventListener("click", function(event) {
+    localStorage.clear();
 });
+
+var finalScore = []; 
+
+var loadScores = function names() {
+    var finalScore = localStorage.getItem("contactInfo", "timeLeft");
+    if (!finalScore) {
+        return false;
+    }
+
+    for (1 = 0; i < finalScore.length, i++) {
+        var finalScore = finalScore[i];
+        var listItemEl = document.createElement("li");
+        listItemEl.textContent = finalScore;
+    }
+    finalScore.push(finalScore)
+};

@@ -133,16 +133,13 @@ function resultRender() {
         result.textContent = "Your final score is " + timeLeft + ".";
     }
 }; 
-// local storage
-var initial = document.querySelector("contactInfo");
 
-userInfo.addEventListener("click", function(event) {
-    var user = {
-        userName: contactInfo.value.trim()
-    };
+// ask for initial
+userInfo.addEventListener("click", function() {
+    var initial = document.getElementById("contactInfo").ariaValueMax; 
 
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("initial", JSON.stringify(initial));
+    localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
 
-    localStorage.getItem("user", JSON.parse(user));
-});
-
+    loadScores();
+})
