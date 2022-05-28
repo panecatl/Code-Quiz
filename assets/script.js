@@ -50,6 +50,17 @@ var questions = [
     correct: "2"},
 ]
 
+// hiding these id tags
+startQuiz.style.display = "block";
+quiz.style.display = "none";
+finalScore.style.display = "none";
+
+// button to start quiz
+var startBtn = document.getElementById("startBtn");
+
+startBtn.addEventListener("click", startGame);
+
+
 // timer 
 var timeLeft = 70;
 var startScore = 0;
@@ -122,24 +133,15 @@ function resultRender() {
         result.textContent = "Your final score is " + timeLeft + ".";
     }
 }; 
-
-// hiding these id tags
-startQuiz.style.display = "block";
-quiz.style.display = "none";
-finalScore.style.display = "none";
-
-// button to start quiz
-var startBtn = document.getElementById("startBtn");
-
-startBtn.addEventListener("click", startGame);
-
 // local storage
-userInfo.addEventListener("click", function loadScores() {
-    var userInput = document.getElementById("contactInfo").value;
+var initial = document.querySelector("contactInfo");
 
-    localStorage.setItem("contactInfo", JSON.stringify("initital", userInput));
-    localStorage.setItem("timeLeft", JSON.stringify("timeScore", timeLeft));
+userInfo.addEventListener("click", function(event) {
+    var user = {
+        userName: initial.ariaValueMax.trim()
+    };
 
-    var initial = localStorage.getItem("initial",);
-    loadScores();
-})
+    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.getItem("user", JSON.stringify(user));
+});
+
