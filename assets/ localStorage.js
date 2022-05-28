@@ -13,7 +13,7 @@ var loadScores = function names() {
         return false;
     }
 
-    for (1 = 0; i < finalScore.length, i++) {
+    for (i = 0; i < finalScore.length; i++) {
         var finalScore = finalScore[i];
         var listItemEl = document.createElement("li");
         listItemEl.textContent = finalScore;
