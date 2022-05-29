@@ -17,4 +17,4 @@ Made with ❤️ by Yussel Panecatl
 ![](https://user-images.githubusercontent.com/101958094/170851178-d71923f6-07fb-46ab-8701-746db620a62c.png)
 
 # Deployed Website
-https://www.allrecipes.com/recipe/24771/basic-mashed-potatoes/
+https://panecatl.github.io/Code-Quiz/
