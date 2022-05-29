@@ -136,7 +136,7 @@ function resultRender() {
 
 // ask for initial
 userInfo.addEventListener("click", function() {
-    var initial = document.getElementById("contactInfo").ariaValueMax; 
+    var initial = document.getElementById("contactInfo").value; 
 
     localStorage.setItem("initial", JSON.stringify(initial));
     localStorage.setItem("timeLeft", JSON.stringify(timeLeft));
